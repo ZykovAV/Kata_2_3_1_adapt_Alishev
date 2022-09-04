@@ -9,8 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca758ab-5fad-47f1-96f0-6aea0dfa87bd" name="Changes" comment="dobavil new i edit i ne rabotaet:(">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/edit.html" afterDir="false" />
+    <list default="true" id="0ca758ab-5fad-47f1-96f0-6aea0dfa87bd" name="Changes" comment="rabotaet i create i update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/dao/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/users.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="nemaster" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -203,7 +208,7 @@
       <workItem from="1662246404879" duration="2364000" />
       <workItem from="1662289927880" duration="1047000" />
       <workItem from="1662291134853" duration="1334000" />
-      <workItem from="1662296224597" duration="14186000" />
+      <workItem from="1662296224597" duration="16754000" />
     </task>
     <task id="LOCAL-00001" summary="rabotaet prostaya webforma, zahod v user">
       <created>1662318497180</created>
@@ -219,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662322528799</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="rabotaet i create i update">
+      <created>1662322778219</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662322778219</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +251,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rabotaet prostaya webforma, zahod v user" />
     <MESSAGE value="dobavil new i edit i ne rabotaet:(" />
-    <option name="LAST_COMMIT_MESSAGE" value="dobavil new i edit i ne rabotaet:(" />
+    <MESSAGE value="rabotaet i create i update" />
+    <option name="LAST_COMMIT_MESSAGE" value="rabotaet i create i update" />
   </component>
 </project>

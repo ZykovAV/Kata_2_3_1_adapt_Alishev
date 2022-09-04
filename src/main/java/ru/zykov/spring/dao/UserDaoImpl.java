@@ -36,7 +36,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User show(int id) {
 //        return personList.get(id);
-        return userList.stream().filter(person -> person.getId() == id).findAny().orElse(null);
+        return userList.stream().filter(user -> user.getId() == id).findAny().orElse(null);
     }
 
     @Override
@@ -48,5 +48,9 @@ public class UserDaoImpl implements UserDao {
     public void update(int id, User updatedUser) {
         User userToBeUpdate = show(id);
         userToBeUpdate.setName(updatedUser.getName());
+    }
+
+    public void delete(int id) {
+        userList.removeIf(user -> user.getId() == id);
     }
 }
