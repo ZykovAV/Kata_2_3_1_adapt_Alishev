@@ -3,10 +3,12 @@ package ru.zykov.spring.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.zykov.spring.dao.UserDao;
 import ru.zykov.spring.models.User;
 
+import javax.validation.Valid;
 import java.time.Period;
 
 @Controller
@@ -39,7 +41,10 @@ public class UserController {
     }
 
     @PostMapping
-    public String createUser(@ModelAttribute("user") User user) {
+    public String createUser(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()){
+            return "/users/new";
+        }
         userDao.save(user);
         return "redirect:/users";
     }
@@ -51,7 +56,10 @@ public class UserController {
     }
 
     @PatchMapping("/{id}")
-    public String update(@ModelAttribute("user") User user, @PathVariable("id") int id) {
+    public String update(@ModelAttribute("user") @Valid User user, BindingResult bindingResult, @PathVariable("id") int id) {
+        if (bindingResult.hasErrors()){
+            return "users/edit";
+        }
         userDao.update(id, user);
         return "redirect:/users";
     }

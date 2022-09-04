@@ -3,6 +3,9 @@ package ru.zykov.spring.models;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "my_db.table")
@@ -14,11 +17,19 @@ public class User {
     @Column(name="id")
     private long id;
 
+    @NotEmpty(message = "Name should not be empty")
+    @Size(min=2, max=30, message = "name should be between 2 and 30 characters")
+
     @Column(name="name")
     private String name;
 
+    @NotEmpty(message = "Surname should not be empty")
+    @Size(min=2, max=30, message = "Surname should be between 2 and 30 characters")
+
     @Column(name="surname")
     private String surname;
+
+    @Min(value = 0, message = "Age should be greater than 0")
 
     @Column(name="age")
     private byte age;
