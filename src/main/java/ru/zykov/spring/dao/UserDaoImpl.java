@@ -48,6 +48,9 @@ public class UserDaoImpl implements UserDao {
     public void update(int id, User updatedUser) {
         User userToBeUpdate = show(id);
         userToBeUpdate.setName(updatedUser.getName());
+        userToBeUpdate.setAge(updatedUser.getAge());
+        userToBeUpdate.setSurname(updatedUser.getSurname());
+
     }
 
     public void delete(int id) {

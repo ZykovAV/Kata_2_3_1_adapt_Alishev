@@ -9,11 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca758ab-5fad-47f1-96f0-6aea0dfa87bd" name="Changes" comment="rabotaet i create i update">
+    <list default="true" id="0ca758ab-5fad-47f1-96f0-6aea0dfa87bd" name="Changes" comment="rabotaet crud cherez web">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/zykov/spring/dao/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/users.html" afterDir="false" />
     </list>
@@ -208,7 +209,7 @@
       <workItem from="1662246404879" duration="2364000" />
       <workItem from="1662289927880" duration="1047000" />
       <workItem from="1662291134853" duration="1334000" />
-      <workItem from="1662296224597" duration="16754000" />
+      <workItem from="1662296224597" duration="19562000" />
     </task>
     <task id="LOCAL-00001" summary="rabotaet prostaya webforma, zahod v user">
       <created>1662318497180</created>
@@ -231,7 +232,28 @@
       <option name="project" value="LOCAL" />
       <updated>1662322778219</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="rabotaet crud cherez web">
+      <created>1662326271331</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662326271331</updated>
+    </task>
+    <task id="LOCAL-00005" summary="rabotaet crud cherez web">
+      <created>1662326395171</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662326395171</updated>
+    </task>
+    <task id="LOCAL-00006" summary="rabotaet crud cherez web">
+      <created>1662326526861</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662326526861</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +274,7 @@
     <MESSAGE value="rabotaet prostaya webforma, zahod v user" />
     <MESSAGE value="dobavil new i edit i ne rabotaet:(" />
     <MESSAGE value="rabotaet i create i update" />
-    <option name="LAST_COMMIT_MESSAGE" value="rabotaet i create i update" />
+    <MESSAGE value="rabotaet crud cherez web" />
+    <option name="LAST_COMMIT_MESSAGE" value="rabotaet crud cherez web" />
   </component>
 </project>
