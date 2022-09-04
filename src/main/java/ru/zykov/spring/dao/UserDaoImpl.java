@@ -38,4 +38,15 @@ public class UserDaoImpl implements UserDao {
 //        return personList.get(id);
         return userList.stream().filter(person -> person.getId() == id).findAny().orElse(null);
     }
+
+    @Override
+    public void save(User user) {
+        user.setId(++UserCount);
+        userList.add(user);
+    }
+
+    public void update(int id, User updatedUser) {
+        User userToBeUpdate = show(id);
+        userToBeUpdate.setName(updatedUser.getName());
+    }
 }
