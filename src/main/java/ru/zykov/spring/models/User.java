@@ -3,15 +3,12 @@ package ru.zykov.spring.models;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 @Entity
-@Table(name = "my_db.table")
-
-
+@Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
@@ -19,35 +16,19 @@ public class User {
 
     @NotEmpty(message = "Name should not be empty")
     @Size(min=2, max=30, message = "name should be between 2 and 30 characters")
-
-    @Column(name="name")
+    @Column(name="firstname")
     private String name;
 
     @NotEmpty(message = "Surname should not be empty")
     @Size(min=2, max=30, message = "Surname should be between 2 and 30 characters")
-
-    @Column(name="surname")
+    @Column(name="lastname")
     private String surname;
 
     @Min(value = 0, message = "Age should be greater than 0")
-
     @Column(name="age")
     private byte age;
 
     public User() {
-    }
-
-    public User(long id, String name, String surname, byte age) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-    }
-
-    public User(String name, String surname, byte age) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
     }
 
     public long getId() {

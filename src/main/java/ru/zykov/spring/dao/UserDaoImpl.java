@@ -1,59 +1,49 @@
 package ru.zykov.spring.dao;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import ru.zykov.spring.models.User;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Service
+@Transactional
 public class UserDaoImpl implements UserDao {
-    private static int UserCount;
-    //    UserDao userDao = new UserDaoImpl();
-    List<User> userList;
 
-    {
-        this.userList = new ArrayList<>();
-        userList.add(new User(++UserCount, "Steve", "Yzerman", (byte) 47));
-        userList.add(new User(++UserCount, "Igor", "Larionov", (byte) 51));
-        userList.add(new User(++UserCount, "Mario", "Lemieux", (byte) 53));
-        userList.add(new User(++UserCount, "Pat", "Lafontaine", (byte) 50));
-    }
+    @PersistenceContext
+    private EntityManager entityManager;
 
     public UserDaoImpl() {
     }
 
     @Override
-    public List<User> index() {
-        return userList;
-    }
-
-    @Override
     public List<User> getAllUsers() {
-        return userList;
+        return entityManager.createQuery("SELECT u FROM User u", User.class).getResultList();
     }
 
     @Override
-    public User show(int id) {
-//        return personList.get(id);
-        return userList.stream().filter(user -> user.getId() == id).findAny().orElse(null);
+    public User getUser(int id) {
+
+        TypedQuery<User> oneUserQuery = entityManager.createQuery("select u from User u where u.id = :id", User.class);
+        oneUserQuery.setParameter("id", id);
+        return oneUserQuery.getSingleResult();
     }
 
     @Override
     public void save(User user) {
-        user.setId(++UserCount);
-        userList.add(user);
+        entityManager.persist(user);
     }
 
     public void update(int id, User updatedUser) {
-        User userToBeUpdate = show(id);
-        userToBeUpdate.setName(updatedUser.getName());
-        userToBeUpdate.setAge(updatedUser.getAge());
-        userToBeUpdate.setSurname(updatedUser.getSurname());
-
+        entityManager.merge(updatedUser);
     }
 
-    public void delete(int id) {
-        userList.removeIf(user -> user.getId() == id);
+    public void delete(int id){
+        entityManager.remove(getUser(id));
     }
 }
